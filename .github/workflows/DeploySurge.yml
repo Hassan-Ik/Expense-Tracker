@@ -12,13 +12,15 @@ jobs:
              uses: actions/setup-node@v2-beta
              with: 
                node-version: 12 
+           - name: Update
+             run: npx browserslist --update-db 
+           
            - uses: borales/actions-yarn@v2.0.0 # `yarn install`
              with:
                cmd: install 
-           - name: Update
-             run: npx browserslist --update-db 
-           - name: Build React App                              
-             run: yarn build 
+           - uses: borales/actions-yarn@v2.0.0
+             with:
+              cmd: build # will run `yarn build` command
            - name: Install Surge
              run: npm install --global surge  
            - name: Run surge
