@@ -14,7 +14,6 @@ jobs:
                node-version: 12 
            - name: Update
              run: npx browserslist --update-db 
-           
            - uses: borales/actions-yarn@v2.0.0 # `yarn install`
              with:
                cmd: install 
