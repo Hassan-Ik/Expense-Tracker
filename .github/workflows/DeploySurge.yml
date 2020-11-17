@@ -25,4 +25,4 @@ jobs:
            - name: Install Surge
              run: npm install --global surge  
            - name: Run surge
-             run: surge myexpense_hi.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+             run: surge ./myexpense_hi.surge.sh --token ${{ secrets.SURGE_TOKEN }}
