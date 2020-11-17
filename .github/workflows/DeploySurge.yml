@@ -21,7 +21,7 @@ jobs:
            - name: npm test:ci
              run: npm run test:ci
              env:
-              CI: false
+              CI: ""
            - name: Build React App
              run: yarn build
              
