@@ -19,7 +19,7 @@ jobs:
              with:
                cmd: install 
            - name: npm test:ci
-             run: npm run test:ci
+             run: npm run test
              env:
               CI: ""
            - name: Build React App
